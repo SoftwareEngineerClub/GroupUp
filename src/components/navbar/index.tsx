@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// export interface NavbarProps {}
-
-export const Navbar = ({ ...props }: any): JSX.Element => {
+export const Navbar = (): JSX.Element => {
   return (
-    <section className="h-fit w-full bg-lightBackground">
+    <section className="h-fit w-full ">
       <div className="mx-16 flex justify-between pt-[15px]">
+        {/* logo placeholder */}
         <Link className="text-[40px]" href="/">
           Group up
         </Link>
+
+        {/* search box container */}
         <div className="flex items-center">
           <input
             className="mr-[9px] h-[38px] w-[465px] rounded-[5px] pl-[15px]"
@@ -25,6 +26,8 @@ export const Navbar = ({ ...props }: any): JSX.Element => {
             />
           </button>
         </div>
+
+        {/* Link container */}
         <div className="flex items-center">
           <Link className="mr-[15px]" href="/">
             About
@@ -35,6 +38,8 @@ export const Navbar = ({ ...props }: any): JSX.Element => {
           <Link className="mr-[20px]" href="/">
             Profile
           </Link>
+
+          {/* button for light/dark mode */}
           <button className=" flex h-[38px] w-[45px] items-center justify-center rounded-[5px] border-[1px] border-black bg-white">
             <Image
               src="/darkModeIcon.png"
